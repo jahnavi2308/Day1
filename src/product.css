@@ -1,0 +1,104 @@
+.card {
+    
+    padding: 20px;
+    text-align: center;
+    height: 550px; 
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex: 0 0 30%;
+    width: 12rem; 
+    margin: 0; 
+    margin-bottom: 20px; 
+}
+.card-img-top{
+    max-width: 48%;
+    height: 13rem;
+    margin: 10px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight:600;
+    font-family:'Arial sans-serif';
+    text-align: left;
+    
+}
+.product-container {
+    display: flex;
+    align-items: center;
+    padding: 20px; 
+    border-width:0.2px;
+    border: solid;
+    border-color: lightgray;
+    width: 100%;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.specification-container{
+    margin-top: 0.2px;
+    border: width 0.5px;
+    border: solid;
+    border-color: lightgray;
+}
+.card-text {
+    font-size: 15px;
+    font-family:'Arial sans-serif';
+    color:gray;
+   
+}
+.review-container{
+    margin-top: 0.2px;
+    border: width 0.5px;
+    border: solid;
+    border-color: lightgray;
+}
+.card-for-register {
+    border: 1px solid hsl(0,0%,80%);
+    border-radius: 3px;
+    box-shadow: 5px 5px hsl(0,0%,0%,0.1);
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    height: 40rem; 
+    overflow: hidden;
+    text-align: left;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border:none;
+    height: auto;
+    width: 90%;
+    margin:10px;
+}
+.image-container{
+    width: 20rem;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cart-button{
+    background-color: gold;
+    color: black;
+    width:315px;
+    height: 35px;
+    border-radius: 4px;
+    border-width: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cart-button:hover{
+    background-color: white;
+    color: black;
+    
+}
+.stars {
+    font-size: 24px;
+    color: gold; /* or any color you prefer */
+}

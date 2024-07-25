@@ -1,7 +1,19 @@
 import ReactDOM from "react-dom/client";
-import Card from "./card";
+// import CardUI from "./CardUI";
+// import Input from "./seven";
 // import F1 from "./app";
+import Login from "./loginfrom";
+// import ReviewInput from "./seven";
+import Register from "./registerform";
+// import Tabfun from "./Tabfun";
+import Products from "./products";
+import App from "./app";
+// import Tabfun from "./Tabfun";
 const rootElement = document.getElementById('root');
 const rootref = ReactDOM.createRoot(rootElement);
 // rootref.render(<F1/>);
-rootref.render(<Card />);
+// rootref.render(<CardUI />);
+// rootref.render(<Tabfun />);
+// rootref.render(<Products />)
+// rootref.render(<ReviewInput />)
+rootref.render(<App />)

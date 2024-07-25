@@ -1,14 +1,18 @@
-import One from "./one";
-import Two from "./Two";
-import Three from "./Three";
-function F1(){
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Tabfun from "./Tabfun";
+import Products from "./products";
+import ReviewInput from "./seven";
+
+function App(){
     return (
-        <div>
-            <h1>Welcome</h1> 
-            <One />
-            <Two />
-            <Three />
-        </div>
-    )
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Tabfun />}/>
+            <Route path="/products" element ={<Products />} />
+            <Route path="/review" element={<ReviewInput />} />
+            
+        </Routes>
+        </BrowserRouter>
+    );
 }
-export default F1;
+export default App;
