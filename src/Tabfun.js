@@ -1,4 +1,5 @@
 import Login from "./loginfrom";
+import Navigation from "./Navigation";
 import Register from "./registerform";
 import {useState} from "react";
 function Tabfun(){
@@ -9,6 +10,7 @@ function Tabfun(){
     return(
         <div>
             <div style={{textAlign:"center",marginTop:"20px"}}>
+                {/* <Navigation /> */}
             <button onClick={showLogin} className="btn btn-primary" style={{ width: 'auto',marginRight:"10px",marginLeft:"30px" }} > Login</button>
             <button onClick={showRegister} className="btn btn-primary" style={{ width: 'auto' }} >Register</button>
             </div>

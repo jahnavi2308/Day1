@@ -6,7 +6,7 @@ import Login from "./loginfrom";
 // import ReviewInput from "./seven";
 import Register from "./registerform";
 // import Tabfun from "./Tabfun";
-import Products from "./products";
+// import Products from "./janu";
 import App from "./app";
 // import Tabfun from "./Tabfun";
 const rootElement = document.getElementById('root');

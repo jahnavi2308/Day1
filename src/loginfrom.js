@@ -1,9 +1,11 @@
-import {useRef,useState,useEffect} from "react";
+import {useRef,useState,useEffect, useContext} from "react";
 import "./card.css";
+import { UserContext } from "./Home";
 function Login(){
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [resultMessage, setResultMessage] = useState('');
+    const {isLogin,setIsLogin} =  useContext(UserContext)
     // use Effect to focus on input field everytime we Refresh
     useEffect(()=>{
         if(firstRef.current)
@@ -18,6 +20,7 @@ function Login(){
 
         if (firstValue === secondValue) {
             setResultMessage('Successful');
+            setIsLogin(true);
         } else {
             setResultMessage('Fail');
         }

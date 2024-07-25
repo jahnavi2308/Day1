@@ -10,6 +10,7 @@
     width: 12rem; 
     margin: 0; 
     margin-bottom: 20px; 
+   
 }
 .card-img-top{
     max-width: 48%;
@@ -85,7 +86,7 @@
     
 }
 .cart-button{
-    background-color: gold;
+    background-color: violet;
     color: black;
     width:315px;
     height: 35px;

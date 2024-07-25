@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import "./product.css";
+import Navigation from "./Navigation";
+import Six from "./six";
+// import { globalContext } from "./app";
 function Products(){
     const [counts, setCounts] = useState([]); // Initialize counts for each product
     const [data, setData] = useState([]);
+    // const {globalCount,setGlobalCount} = useContext(globalContext)
     
     useEffect(()=>{
         //setCount(5);
@@ -12,14 +16,20 @@ function Products(){
         const newCounts = [...counts];
         newCounts[index] += 1;
         setCounts(newCounts);
+        // setGlobalCount(globalCount+1);
     }
     const buttonClickSubtract = (index) => {
         if(counts[index] > 0){
             const newCounts = [...counts];
             newCounts[index] -= 1;
             setCounts(newCounts);
+            // setGlobalCount(globalCount-1);
         }
     }
+    // const btnAddToCard =()=>{
+    //     setCounts(1);
+    //     setGlobalCount(globalCount+1);
+    // }
     useEffect(()=>{
         const fetchMyData = async () => { //async: When you tell a function it’s async, you're saying, "This function might take some time, so get ready to wait."
                 const res = await fetch('https://fakestoreapi.com/products');
@@ -35,6 +45,7 @@ function Products(){
     },[])
     return (
         <div className="card-container">
+            <Navigation />
                 {data.map((dataItem,index)=> (
                 <div className="card" key={index}>
                     <div className='image-container'>
@@ -48,7 +59,8 @@ function Products(){
                       <p className="card-text">({dataItem.rating?.count} reviews)</p>
                       <p className='card-text'>₹{dataItem.price}</p>
                     </div>
-                    <div>
+                    <Six />
+                    {/* <div>
                             {
                             counts[index] === 0 ? 
                                     (<div>
@@ -60,7 +72,7 @@ function Products(){
                                         <button className="btn btn-primary" onClick={() => buttonClickSubtract(index)}>-</button>
                                     </div>)
                             }
-                        </div>
+                        </div> */}
                 </div>
                 ))}
         </div>
