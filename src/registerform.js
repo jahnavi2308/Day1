@@ -1,5 +1,6 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import "./card.css";
+import { globalContext } from "./app";
 function Register(){
     const [collegeIdValue,setCollegeId] = useState('');
     const [passwordValue,setPassword] =useState('');
@@ -8,25 +9,26 @@ function Register(){
     const [yearValue,setYear] = useState('');
     const [genderValue,setGender] = useState('Female');
     const [userValue,setUser] = useState({});
+    const {globalObject,setGlobalObject} = useContext(globalContext);
     const getCollegeId =(event) => {
     setCollegeId(event.target.value)
-    console.log(collegeIdValue);
+    console.log(event.target.value);
     }
     const getPassword =(event) => {
-        setPassword(event.target.value)
-        console.log(passwordValue);
+    setPassword(event.target.value)
+    console.log(event.target.value);
 }
     const getEmail =(event) => {
     setEmail(event.target.value)
-    console.log(emailValue);
+    console.log(event.target.value);
 }
     const getBranch =(event) => {
     setBranch(event.target.value)
-    console.log(branchValue);
+    console.log(event.target.value);
 }
 const getYear =(event) => {
     setYear(event.target.value)
-    console.log(yearValue);
+    console.log(event.target.value);
 }
 const getGender =(event) =>{
     setGender(event.target.value)
@@ -37,10 +39,19 @@ const submitData =(event) => {
     const obj = {
         collegeIdValue,passwordValue,emailValue,branchValue,genderValue
     }
-    setUser(obj)
     console.log(obj);
+    setUser(obj)
+    
     console.log(userValue);
+    setGlobalObject(obj);
+    setCollegeId("");
+    setPassword("");
+    setEmail("");
+    setBranch("");
+    setYear("");
+    setGender("");
 }
+
     return (
         <div style={{display:"flex",alighItems:"center",justifyContent:"center",marginTop:"25px"}}>
             <div className="card" style ={{height:"42rem",width:"350px"}}>

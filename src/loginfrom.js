@@ -1,11 +1,11 @@
 import {useRef,useState,useEffect, useContext} from "react";
 import "./card.css";
-import { UserContext } from "./Home";
+import { globalContext } from "./app";
 function Login(){
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [resultMessage, setResultMessage] = useState('');
-    const {isLogin,setIsLogin} =  useContext(UserContext)
+    const {globalIsLogin,setGlobalIsLogin} =  useContext(globalContext)
     // use Effect to focus on input field everytime we Refresh
     useEffect(()=>{
         if(firstRef.current)
@@ -20,7 +20,7 @@ function Login(){
 
         if (firstValue === secondValue) {
             setResultMessage('Successful');
-            setIsLogin(true);
+            setGlobalIsLogin(true);
         } else {
             setResultMessage('Fail');
         }
@@ -28,7 +28,7 @@ function Login(){
         secondRef.current.value='';
     }
     return(
-        <div style={{display:"flex",alighItems:"center",justifyContent:"center",marginTop:"180px"}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"180px"}}>
         <div className="card" >
             <form onSubmit={formSubmitted}>
                 <h1 className="card-title">Login</h1>

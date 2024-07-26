@@ -1,16 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import Tabfun from "./Tabfun";
+import { globalContext } from "./app";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
-export const UserContext = createContext(); //create context
+// export const UserContext = createContext(); //create context
 function Home(){
-    const [isLogin,setIsLogin] = useState(false);
+    const {globalObject,setGlobalObject,globalIsLogin,globalSetIsLogin} = useContext(globalContext);
     return(
-        <UserContext.Provider value={{isLogin,setIsLogin}}>
+        // <UserContext.Provider value={{globalIsLogin,globalIsLogin,globalObject,setGlobalObject}}>
         <div>
             {
-                isLogin ?
+                globalIsLogin ?
                 // <div>Logged In </div> : <div>Not Logged In</div>
                 <div> <Welcome />
                 {/* // <h1>Welcome  to SVES Commerce </h1>
@@ -20,7 +21,7 @@ function Home(){
                 
             }
         </div>
-        </UserContext.Provider>
+        // </UserContext.Provider>
     );
 }
 export default Home;

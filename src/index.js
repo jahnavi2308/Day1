@@ -17,3 +17,4 @@ const rootref = ReactDOM.createRoot(rootElement);
 // rootref.render(<Products />)
 // rootref.render(<ReviewInput />)
 rootref.render(<App />)
+// rootref.render(<Register />)
