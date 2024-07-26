@@ -5,7 +5,7 @@ function Login(){
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [resultMessage, setResultMessage] = useState('');
-    const {globalIsLogin,setGlobalIsLogin} =  useContext(globalContext)
+    const {globalIsLogin,setGlobalIsLogin,globalObject,setGlobalObject} =  useContext(globalContext)
     // use Effect to focus on input field everytime we Refresh
     useEffect(()=>{
         if(firstRef.current)
@@ -18,11 +18,14 @@ function Login(){
         const firstValue = firstRef.current.value;
         const secondValue = secondRef.current.value;
 
-        if (firstValue === secondValue) {
-            setResultMessage('Successful');
+        if (firstValue === globalObject.collegeIdValue && secondValue === globalObject.passwordValue) {
+            setResultMessage(' You are Successful logged In');
             setGlobalIsLogin(true);
+            localStorage.setItem("name","ReactJs");
         } else {
             setResultMessage('Fail');
+            setGlobalIsLogin(false);
+
         }
         firstRef.current.value='';
         secondRef.current.value='';

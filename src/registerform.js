@@ -1,7 +1,11 @@
-import {useContext, useState} from "react";
+import {useContext, useState,useRef} from "react";
 import "./card.css";
 import { globalContext } from "./app";
 function Register(){
+    const idRef = useRef(null);
+    const passwordRef = useRef(null);
+    const emailRef = useRef(null);
+
     const [collegeIdValue,setCollegeId] = useState('');
     const [passwordValue,setPassword] =useState('');
     const [emailValue,setEmail] = useState('');
@@ -44,9 +48,10 @@ const submitData =(event) => {
     
     console.log(userValue);
     setGlobalObject(obj);
-    setCollegeId("");
-    setPassword("");
-    setEmail("");
+    idRef.current.value = "";
+    passwordRef.current.value = "";
+    emailRef.current.value = "";
+
     setBranch("");
     setYear("");
     setGender("");
@@ -59,11 +64,11 @@ const submitData =(event) => {
                 <p>Provide your details to register</p>
                 <form style={{display:"flex",flexDirection:"column",gap:"10px"}}>
                     <h6>College Id</h6>
-                    <input type="text" placeholder="College Id" onChange={getCollegeId}/>
+                    <input type="text" placeholder="College Id"  ref={idRef} onChange={getCollegeId}/>
                     <h6>Password</h6>
-                    <input type="password" placeholder="Password" onChange={getPassword}/>
+                    <input type="password" placeholder="Password" ref={passwordRef} onChange={getPassword}/>
                     <h6>Email Address</h6>
-                    <input type="text"  placeholder="Email Address" onChange={getEmail}/>
+                    <input type="text"  placeholder="Email Address" ref={emailRef} onChange={getEmail}/>
                     <h6>Branch</h6>
                     <select className="form-select"  value = {branchValue} aria-label="Default select example" onChange={getBranch}>
                     <option value ="">Select Branch</option>

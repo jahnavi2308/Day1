@@ -44,8 +44,12 @@ function Products(){
         fetchMyData();
     },[])
     return (
-        <div className="card-container">
+        <div>
             <Navigation />
+        
+        <div className="card-container">
+            
+            
                 {data.map((dataItem,index)=> (
                 <div className="card" key={index}>
                     <div className='image-container'>
@@ -75,6 +79,7 @@ function Products(){
                         </div> */}
                 </div>
                 ))}
+        </div>
         </div>
     );
 }

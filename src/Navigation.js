@@ -11,7 +11,7 @@ function Navigation (){
             </div>
 
             <div style={{display:'flex',gap:'10px',cursor:'pointer'}}>
-            <Link to ="/cart" >Cart({globalCount})</Link>
+            <Link to ="/cart" > {(globalCount > 0) ? '🥳' : '🙃'}Cart({globalCount})</Link>
             <Link to ="/profile" >Profile</Link>
             </div>
         </div>

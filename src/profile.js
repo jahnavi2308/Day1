@@ -1,4 +1,4 @@
-import { useContext,useState } from "react";
+import { useContext,useEffect,useState } from "react";
 import { globalContext } from "./app";
 import Navigation from "./Navigation";
 
@@ -12,6 +12,11 @@ function Profile (){
     const logoutAction =() => {
         setGlobalIsLogin(false);
     }
+    useEffect(() => {
+        const name = localStorage.getItem("name");
+        const branch = localStorage.getItem("branch");
+        console.log(name);
+    })
     return(
         <div>
             <Navigation />
