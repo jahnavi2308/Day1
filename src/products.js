@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./product.css";
+import "./product.css"
 import Navigation from "./Navigation";
 import Six from "./six";
 // import { globalContext } from "./app";
@@ -39,7 +39,7 @@ function Products(){
                 setData(resData);
                 console.log(resData)
                 setData(resData);
-                setCounts(Array(resData.length).fill(0));
+                // setCounts(Array(resData.length).fill(0));
         } 
         fetchMyData();
     },[setCounts])
