@@ -6,7 +6,7 @@ function Eight(){
         <div style={{display:"flex",alignItems:"flex-start",borderWidth:"0.3px",border:'solid',borderColor:'lightgrey'}}>
             <div style ={{marginRight :"20px",textAlign:"left"}}>
             
-            <img src ="lap_image.jpeg" alt="Image" style={{marginRight:"20px"}} />
+            <img src ="lap_image.jpeg" style={{marginRight:"20px"}} />
             <div style={{ marginTop: "20px" }}></div>
             
             </div>
