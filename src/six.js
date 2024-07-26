@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { globalContext } from "./app";
+import { globalContext } from "./App";
 
 function Six(){
     const {globalCount,setGlobalCount} = useContext(globalContext)

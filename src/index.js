@@ -5,9 +5,10 @@ import ReactDOM from "react-dom/client";
 import Login from "./loginfrom";
 // import ReviewInput from "./seven";
 import Register from "./registerform";
+import App from "./App";
 // import Tabfun from "./Tabfun";
 // import Products from "./janu";
-import App from "./app";
+
 // import Tabfun from "./Tabfun";
 const rootElement = document.getElementById('root');
 const rootref = ReactDOM.createRoot(rootElement);

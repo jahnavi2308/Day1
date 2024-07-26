@@ -1,6 +1,6 @@
 import {useContext, useState,useRef} from "react";
 import "./card.css";
-import { globalContext } from "./app";
+import { globalContext } from "./App";
 function Register(){
     const idRef = useRef(null);
     const passwordRef = useRef(null);

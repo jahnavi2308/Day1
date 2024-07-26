@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { globalContext } from "./app";
+import { globalContext } from "./App";
 import { useContext } from "react";
 function Navigation (){
     const {globalCount,setGlobalCount} = useContext(globalContext)

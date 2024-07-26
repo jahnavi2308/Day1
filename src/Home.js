@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import Tabfun from "./Tabfun";
-import { globalContext } from "./app";
+import { globalContext } from "./App";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
