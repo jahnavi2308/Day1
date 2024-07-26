@@ -41,7 +41,7 @@
 // }
 // export default Input;
 import React, { useState } from 'react';
-import Review from "./review";
+// import Review from "./review";
 import Eight from "./Eight";
 import Nine from "./Nine";
 function ReviewInput() {

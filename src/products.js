@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 import Six from "./six";
 // import { globalContext } from "./app";
 function Products(){
-    const [counts, setCounts] = useState([]); // Initialize counts for each product
+    const [ setCounts] = useState([]); // Initialize counts for each product
     const [data, setData] = useState([]);
     // const {globalCount,setGlobalCount} = useContext(globalContext)
     
@@ -12,20 +12,20 @@ function Products(){
         //setCount(5);
         console.log('use effect is called');
     },[]);
-    const buttonClickAdd = (index) => {
-        const newCounts = [...counts];
-        newCounts[index] += 1;
-        setCounts(newCounts);
-        // setGlobalCount(globalCount+1);
-    }
-    const buttonClickSubtract = (index) => {
-        if(counts[index] > 0){
-            const newCounts = [...counts];
-            newCounts[index] -= 1;
-            setCounts(newCounts);
-            // setGlobalCount(globalCount-1);
-        }
-    }
+    // const buttonClickAdd = (index) => {
+    //     const newCounts = [...counts];
+    //     newCounts[index] += 1;
+    //     setCounts(newCounts);
+    //     // setGlobalCount(globalCount+1);
+    // }
+    // const buttonClickSubtract = (index) => {
+    //     if(counts[index] > 0){
+    //         const newCounts = [...counts];
+    //         newCounts[index] -= 1;
+    //         setCounts(newCounts);
+    //         // setGlobalCount(globalCount-1);
+    //     }
+    // }
     // const btnAddToCard =()=>{
     //     setCounts(1);
     //     setGlobalCount(globalCount+1);
@@ -42,7 +42,7 @@ function Products(){
                 setCounts(Array(resData.length).fill(0));
         } 
         fetchMyData();
-    },[])
+    },[setCounts])
     return (
         <div>
             <Navigation />

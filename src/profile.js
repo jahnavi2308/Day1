@@ -4,8 +4,8 @@ import Navigation from "./Navigation";
 
 function Profile (){
     const [showPassword,setShowPassword] = useState(false);
-    const {globalObject,setGlobalObject} = useContext(globalContext);
-    const {globalIsLogin,setGlobalIsLogin} = useContext(globalContext);
+    const {globalObject} = useContext(globalContext);
+    const {setGlobalIsLogin} = useContext(globalContext);
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     }
@@ -14,7 +14,7 @@ function Profile (){
     }
     useEffect(() => {
         const name = localStorage.getItem("name");
-        const branch = localStorage.getItem("branch");
+        // const branch = localStorage.getItem("branch");
         console.log(name);
     })
     return(

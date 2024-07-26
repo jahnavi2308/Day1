@@ -1,12 +1,12 @@
-import { createContext, useContext, useState } from "react";
+import {  useContext } from "react";
 import Tabfun from "./Tabfun";
 import { globalContext } from "./App";
-import Navigation from "./Navigation";
-import { Link } from "react-router-dom";
+// import Navigation from "./Navigation";
+// import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
 // export const UserContext = createContext(); //create context
 function Home(){
-    const {globalObject,setGlobalObject,globalIsLogin,globalSetIsLogin} = useContext(globalContext);
+    const {globalIsLogin} = useContext(globalContext);
     return(
         // <UserContext.Provider value={{globalIsLogin,globalIsLogin,globalObject,setGlobalObject}}>
         <div>

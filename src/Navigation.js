@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { globalContext } from "./App";
 import { useContext } from "react";
 function Navigation (){
-    const {globalCount,setGlobalCount} = useContext(globalContext)
+    const {globalCount} = useContext(globalContext)
     return (
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between',background:'#e5e5e5',padding:'2px'}}>
             <div style={{display:'flex',gap:'10px',cursor:'pointer'}}>

@@ -5,7 +5,7 @@ function Login(){
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [resultMessage, setResultMessage] = useState('');
-    const {globalIsLogin,setGlobalIsLogin,globalObject,setGlobalObject} =  useContext(globalContext)
+    const {setGlobalIsLogin,globalObject} =  useContext(globalContext)
     // use Effect to focus on input field everytime we Refresh
     useEffect(()=>{
         if(firstRef.current)
